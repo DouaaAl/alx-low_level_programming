@@ -10,15 +10,19 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 0; i < 10 ; i++)
+	for (i = 48; i < 56 ; i++)
 	{
-		for (j = 0; j < 10 ; j++)
+		for (j = 49; j < 57 ; j++)
 		{
-			if ((j * 10 + i) >= (i * 10 + j) && i != j)
+			if (i > j)
 			{
-				putchar(i * 10 + j);
-				putchar(',');
-				putchar(' ');
+				putchar(i);
+				putchar(j);
+				if (n != 56 || m != 57)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
