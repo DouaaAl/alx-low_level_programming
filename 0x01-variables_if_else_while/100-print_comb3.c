@@ -14,10 +14,9 @@ int main(void)
 	{
 		for (j = 0; j < 10 ; j++)
 		{
-			if ((j * 10 + i) >= (i * 10 + j))
+			if ((j * 10 + i) >= (i * 10 + j) && i != j)
 			{
-				putchar(i);
-				putchar(j);
+				putchar(i * 10 + j);
 				putchar(',');
 				putchar(' ');
 			}
