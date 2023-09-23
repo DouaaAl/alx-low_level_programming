@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_sign: get number sign
- * @n: number
- * Return: returns the sign
+ * print_sign - get number sign
+ * @n: number parameters
+ * Return: returns 1, 0 or -1
  */
 
 int print_sign(int n)
@@ -16,10 +16,10 @@ int print_sign(int n)
 
 	else if (n == 0)
 	{
-		_putchar(0);
+		_putchar('0');
 		return (0);
 	}
 
-	_putchar(-1);
+	_putchar('-');
 	return (-1);
 }
