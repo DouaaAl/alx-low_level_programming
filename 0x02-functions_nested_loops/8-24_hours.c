@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * jack_bauer - main function
+ * Reeturn: doesn't return anything
+ */
+
 void jack_bauer(void)
 {
 	int i, j;
@@ -8,25 +13,11 @@ void jack_bauer(void)
 	{
 		for (j = 0 ; j < 60 ; j++)
 		{
-			if ( i < 10)
-			{
-				_putchar('0');
-				_putchar(i + '0');
-			}
-
-			else
-				_putchar(i + '0');
-
+			_putchar(i / 10 + '0');
+			_putchar(i % 10 + '0');
 			_putchar(':');
-
-			if (j < 10)
-			{
-				_putchar('0');
-				_putchar(j + '0');
-			}
-
-			else
-				_putchar(j + '0');
+			_putchar(j / 10 + '0');
+			_putchar(j % 10 + '0');
 		}
 	}
 }
