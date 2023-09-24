@@ -21,7 +21,7 @@ void print_triangle(int size)
 		for (k = size - i ; k >= 1 ; k++)
 		{
 			printf("#");
-		}	
+		}
 
 		printf("\n");
 	}
