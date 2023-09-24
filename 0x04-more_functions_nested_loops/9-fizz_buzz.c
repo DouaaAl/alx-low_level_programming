@@ -21,14 +21,14 @@ int main(void)
 		else if ((i % 3 != 0) && (i % 5 == 0))
 			printf("Buzz");
 
-		else if(i == 1)
+		else if (i == 1)
 			printf("%d", i);
 
 		else
 			printf(" %d", i);
-
-		printf("\n");
 	}
+
+	printf("\n");
 
 	return (0);
 }
