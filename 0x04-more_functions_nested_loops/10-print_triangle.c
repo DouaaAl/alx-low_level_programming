@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_triangle - funciton that prints triangle
@@ -15,19 +14,19 @@ void print_triangle(int size)
 	{
 		for (j = 1 ; j <= size - i ; j++)
 		{
-			printf(" ");
+			_putchar(' ');
 		}
 
 		for (k = size - i ; k >= 1 ; k++)
 		{
-			printf("#");
+			_putchar('#');
 		}
 
-		printf("\n");
+		_putchar('\n');
 	}
 
 	if (size <= 0)
 	{
-		printf("\n");
+		_putchar('\n');
 	}
 }
