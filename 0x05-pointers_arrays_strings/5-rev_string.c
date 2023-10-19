@@ -15,9 +15,11 @@ void rev_string(char *s)
 		count++;
 
 	for (i = 0 ; i < count / 2 ; i++)
+	{
 		char j;
 
-		j = s[i]
+		j = s[i];
 		s[i] = s[count - i - 1];
 		s[count - i - 1] = j;
+	}
 }
