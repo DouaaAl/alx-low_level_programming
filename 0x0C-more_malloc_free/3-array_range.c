@@ -1,31 +1,36 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
-* array_range - creates an array of integers
-* @min: smallest number in the array
-* @max: lagrest value in the array
-*
-* Return: pointer to the address of the memory block
-*/
-
-int *array_range(int min, int max)
+ * alloc_grid - nested loop to make grid
+ * @width: width input
+ * @height: height input
+ * Return: pointer to 2 dim. array
+ */
+int **alloc_grid(int width, int height)
 {
-	int *block;
-	int i, j = 0;
+	int **mee;
+	int x, y;
 
-	if (min > max)
+	if (width <= 0 || height <= 0)
 		return (NULL);
-	block = malloc(sizeof(*block) * ((max - min) + 1));
-	if (block != NULL)
+	mee = malloc(sizeof(int *) * height);
+	if (mee == NULL)
+		return (NULL);
+	for (x = 0; x < height; x++)
 	{
-		for (i = min; i <= max; i++)
+		mee[x] = malloc(sizeof(int) * width);
+		if (mee[x] == NULL)
 		{
-			block[j] = i;
-			j++;
+			for (; x >= 0; x--)
+				free(mee[x]);
+			free(mee);
+			return (NULL);
 		}
-		return (block);
 	}
-	else
-		return (NULL);
-
+	for (x = 0; x < height; x++)
+	{
+		for (y = 0; y < width; y++)
+			mee[x][y] = 0;
+	}
+	return (mee);
 }
