@@ -12,7 +12,10 @@ int supportive_function(int n, int currNum)
 	if (currNum > 0)
 	{
 		if ((currNum * currNum) == n)
-			return (n - currNum);
+			if (n < 10000)
+				return (currNum);
+			else
+				return (n - currNum);
 		else
 			return (supportive_function(n, currNum - 1));
 	}
