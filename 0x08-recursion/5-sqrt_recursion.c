@@ -1,4 +1,5 @@
 #include "main.h"
+#include "supportive_function.c"
 
 /**
  * _sqrt_recursion - returns sqrt of number
@@ -9,17 +10,4 @@
 int _sqrt_recursion(int n)
 {
 	return (supportive_function(n, n));
-}
-
-int supportive_function(int n, int currNum)
-{
-	if (currNum > 0)
-	{
-		if ((currNum * currNum) == n)
-			return (currNum);
-		else
-			return (supportive_function(n, currNum - 1));
-	}
-	else
-		return (-1);
 }
