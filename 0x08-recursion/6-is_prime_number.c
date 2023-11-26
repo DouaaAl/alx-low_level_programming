@@ -9,5 +9,5 @@
 
 int is_prime_number(int n)
 {
-	return help_prime(n, n);
+	return (help_prime(n, n));
 }
