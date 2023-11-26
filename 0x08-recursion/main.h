@@ -3,6 +3,7 @@
 
 int _putchar(char c);
 int supportive_function(int n, int currNum);
+int help_prime(int n, int currNum);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
