@@ -14,5 +14,6 @@ int if_print(int n, int curr);
 int is_palindrome(char *s);
 int check_palindrome(char *s, char *Fs, int n);
 int wildcmp(char *s1, char *s2);
+char *gets1_s2(char *s1, char *s2, char *s3);
 
 #endif
