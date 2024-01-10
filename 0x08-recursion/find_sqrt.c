@@ -7,7 +7,7 @@
  * Return: return the sqrt
  */
 
-int find_sqrt(int num, int curr)
+int find_sqrt(int num, long int curr)
 {
         if (curr < 0)
                 return (-1);
