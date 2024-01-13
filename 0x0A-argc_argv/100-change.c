@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if (num < 0)
 	{
 		printf("0\n");
-		return (0);
+		return (1);
 	}
 
 	Fn = (num / 25);
