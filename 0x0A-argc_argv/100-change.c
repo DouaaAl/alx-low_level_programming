@@ -10,13 +10,15 @@
 
 int main(int argc, char *argv[])
 {
-	int Fn, Sn, FRn, FTn, STn, result, num = atoi(argv[1]);
+	int Fn, Sn, FRn, FTn, STn, result, num;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	num = atoi(argv[1]);
 
 	if (num < 0)
 	{
