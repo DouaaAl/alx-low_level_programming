@@ -25,13 +25,13 @@ char *str_concat(char *s1, char *s2)
 		count2 += 1;
 	strcn = (char *)malloc(sizeof(char) * (count1 + count2 + 1));
 
+	if (strcn == NULL)
+		return (NULL);
 	for (i = 0 ; s1[i] != '\0' ; i++)
 		strcn[i] = s1[i];
 	for (i = 0 ; s2[i] != '\0' ; i++)
 		strcn[count1 + i] = s2[i];
 
 	strcn[(count1 + count2)] = '\0';
-	if (strcn == NULL)
-		return (NULL);
 	return (strcn);
 }
