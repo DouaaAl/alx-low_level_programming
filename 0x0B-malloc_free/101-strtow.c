@@ -32,7 +32,7 @@ char **strtow(char *str)
 			if (str[j + position] != ' ')
 			{
 				letter++;
-				if ((char)str[j + position + 1] == ' ')
+				if (str[j + position + 1] == ' ')
 					break;
 			}
 		}
@@ -46,13 +46,13 @@ char **strtow(char *str)
 		}
 		for (j = 0 ; str[j] != '\0' ; j++)
 		{
-			if ((char)str[position] != ' ')
+			if (str[position] != ' ')
 			{
 				newstr[i][j] = str[position];
 				if (str[position + 1] == ' ')
 					break;
+				position++;
 			}
-			position++;
 		}
 		newstr[i][j] = '\0';
 	}
