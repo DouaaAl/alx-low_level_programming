@@ -49,7 +49,7 @@ char **strtow(char *str)
 			if (str[position] != ' ')
 			{
 				newstr[i][j] = str[position];
-				if (str[position + 1] == ' ')
+				if (str[position + 2] == ' ')
 					break;
 				position++;
 			}
