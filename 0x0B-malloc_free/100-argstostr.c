@@ -12,6 +12,7 @@
 char *argstostr(int ac, char **av)
 {
 	int i, j, count = 0;
+	int k = 0;
 	char *str;
 
 	if ((ac == 0) || (av == NULL))
@@ -28,16 +29,14 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 
-	count = 0;
-
 	for (i = 0 ; i < ac ; i++)
 	{
 		for (j = 0 ; av[i][j] != '\0' ; j++)
 		{
-			str[count] = av[i][j];
-			count++;
+			str[k] = av[i][j];
+			k++;
 		}
-		str[count++] = '\n';
+		str[k++] = '\n';
 	}
 	str[count] = '\0';
 	return (str);
