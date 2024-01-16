@@ -1,5 +1,6 @@
 #include "main.h"
 #include "stdlib.h"
+#include "stdio.h"
 
 /**
  * strtow - main function
@@ -16,9 +17,10 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0 ; str[i] != '\0' ; i++)
 	{
-		if ((str[i] != ' ') && ((str[i - 1] == ' ') || (i == 0)))
+		if ((str[i] != ' ') && ((str[i + 1] == ' ') || (i == 0)))
 			wordCnt++;
 	}
+	printf("%d word count\n", wordCnt);
 
 	newstr = malloc(sizeof(char *) * (wordCnt + 1));
 
@@ -33,10 +35,11 @@ char **strtow(char *str)
 		{
 			if (str[j + position] != ' ')
 			{
+				printf("str[%d + %d] = %c\n", j, position, str[j + position]);
 				letter++;
-				if (str[j + position + 1] == ' ')
-					break;
 			}
+			else if (str[j + position + 1] == ' ')
+				continue;
 		}
 
 		newstr[i] = malloc(sizeof(char) * (letter + 1));
@@ -57,6 +60,7 @@ char **strtow(char *str)
 			}
 		}
 		newstr[i][j] = '\0';
+		printf("letter %d count is %d\n", i, letter);
 	}
 
 	return (newstr);
