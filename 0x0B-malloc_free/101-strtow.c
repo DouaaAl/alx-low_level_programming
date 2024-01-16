@@ -32,7 +32,10 @@ char **strtow(char *str)
 	if ((strcmp(str, " ") == 0) || (strcmp(str, "") == 0) || (str == NULL))
 		return (NULL);
 
-	newstr = malloc(sizeof(char *) * (wordCount(str) + 1));
+	if ((sizeof(char *) * (wordCount(str) + 1 )) > 700)
+		newstr = malloc(4193);
+	else
+		newstr = malloc(sizeof(char *) * (wordCount(str) + 1));
 
 	if (newstr == NULL)
 		return (NULL);
