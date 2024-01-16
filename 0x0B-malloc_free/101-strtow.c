@@ -29,7 +29,7 @@ char **strtow(char *str)
 	int i = 0, j, letter = 0, position = 0, k = 0;
 	char **newstr;
 
-	if ((strcmp(str, " ") == 0) || (strcmp(str, "") == 0) || (str == NULL))
+	if ((strcmp(str, ' ') == 0) || (strcmp(str, "") == 0) || (str == NULL))
 		return (NULL);
 
 	newstr = malloc(sizeof(char *) * (wordCount(str) + 1));
