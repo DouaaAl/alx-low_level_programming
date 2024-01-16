@@ -31,8 +31,7 @@ char **strtow(char *str)
 
 	if ((strcmp(str, " ") == 0) || (strcmp(str, "") == 0) || (str == NULL))
 		return (NULL);
-
-	newstr = malloc(sizeof(char *) * (wordCount(str)));
+	newstr = malloc(sizeof(char *) * (wordCount(str) + 1));
 
 	if (newstr == NULL)
 		return (NULL);
