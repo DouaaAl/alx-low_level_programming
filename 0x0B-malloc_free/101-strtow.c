@@ -50,7 +50,7 @@ char **strtow(char *str)
 			{
 				if (str[position + 1] == ' ')
 					break;
-				newstr[i][j] = str[position];
+				newstr[i][j] = str[j];
 				position++;
 			}
 		}
