@@ -53,7 +53,7 @@ char **strtow(char *str)
 			}
 		}
 
-		newstr[i] = malloc(sizeof(char) * (letter + 1));
+		newstr[i] = malloc(sizeof(char) * (letter));
 
 		if (newstr[i] == NULL)
 		{
