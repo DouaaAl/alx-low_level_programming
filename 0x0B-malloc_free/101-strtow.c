@@ -38,7 +38,8 @@ char **strtow(char *str)
 
 	for (i = 0 ; i < wordCount(str) ; i++)
 	{
-		position++;
+		if (i != 0)
+			position++;
 		letter = 0;
 		k = 0;
 
