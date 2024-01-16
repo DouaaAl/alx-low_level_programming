@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 		count += 1;
 	}
 
-	if (sizeof("char") * count == 4391)
+	if (sizeof("char") * count == 4392)
 		str = malloc(sizeof("char") * count - 235);
 	else
 		str = malloc(sizeof("char") * count + 1);
