@@ -12,6 +12,8 @@ char **strtow(char *str)
 	int i, j, wordCnt = 0, letter = 0, position = 0;
 	char **newstr;
 
+	if ((str == "") || (str == NULL))
+		return (NULL);
 	for (i = 0 ; str[i] != '\0' ; i++)
 	{
 		if ((str[i] != ' ') && ((str[i - 1] == ' ') || (i == 0)))
