@@ -20,7 +20,7 @@ int op_add(int a, int b)
 
 /**
  * op_sub - sub ints
- * @a: first param 
+ * @a: first param
  * @b: second paaram
  * Return: returns ints
  */

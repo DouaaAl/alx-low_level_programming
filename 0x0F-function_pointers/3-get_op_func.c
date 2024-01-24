@@ -2,7 +2,7 @@
 #include <stddef.h>
 
 /**
- * get_op_func - function 
+ * get_op_func - function
  * @s: function param
  * Return: integer
  */
