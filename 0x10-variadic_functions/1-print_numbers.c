@@ -4,7 +4,7 @@
 
 /**
  * print_numbers - function that prints numbers
- * @seperator: first param
+ * @separator: first param
  * @n: n param
  * Return: returns integers and seperators
  */
