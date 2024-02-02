@@ -2,7 +2,7 @@
 
 /**
  * list_len - our functions
- * @h: parameter 
+ * @h: parameter
  * Return: returns a list of nodes
  */
 
