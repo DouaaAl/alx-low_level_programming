@@ -12,7 +12,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int num = 0, mul = 1, i;
-	
+
 	for (i = 1 ; b[i] != '\0' ; i++)
 		mul *= 2;
 
